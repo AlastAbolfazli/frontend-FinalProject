@@ -9,6 +9,9 @@ import AdminPage from "./AdminPage";
 import LoginButton from "./LoginButton";
 import './App.css';
 
+
+const BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 function App() {
   return (
     <Router>
@@ -18,7 +21,7 @@ function App() {
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/login" element={<LoginPage />} /> 
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginButton />} />
         <Route path="/admin" element={<AdminPage />} /> 
       </Routes>
     </Router>
