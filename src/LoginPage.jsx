@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './LoginPage.css';
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const LoginPage = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -26,13 +28,13 @@ const LoginPage = () => {
 
     try {
       if (isSignUp) {
-        const response = await axios.post("http://localhost:3000/api/signup", { email, password });
+        const response = await axios.post(`${API_BASE_URL}/api/signup`, { email, password });
         alert("Sign up successful!");
         localStorage.setItem("userId", response.data.userId);
         localStorage.setItem("userEmail", response.data.email);
         navigate("/user"); 
       } else {
-        const response = await axios.post("http://localhost:3000/api/login", { email, password });
+        const response = await axios.post(`${API_BASE_URL}/api/login`, { email, password });
 
         if (response.data.isAdmin) {
           localStorage.setItem("userEmail", response.data.email);
