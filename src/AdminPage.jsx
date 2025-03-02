@@ -5,6 +5,8 @@ import LoginButton from "./LoginButton";
 import { Button, Container, Typography, Grid, Box, Card, CardContent, Radio , FormControl, TextField, FormLabel, RadioGroup, FormControlLabel } from '@mui/material';
 import './AdminPage.css';
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const AdminPage = () => {
     const navigate = useNavigate();
 
@@ -30,7 +32,7 @@ const AdminPage = () => {
     useEffect(() => {
         const fetchHotels = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/hotels', {
+                const response = await axios.get(`${API_BASE_URL}/api/hotels`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 console.log("Fetched hotels:", response.data);  
@@ -45,7 +47,7 @@ const AdminPage = () => {
     useEffect(() => {
         const fetchReservations = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/reservations", {
+                const response = await axios.get(`${API_BASE_URL}/api/reservations`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setReservations(response.data);
@@ -60,7 +62,7 @@ const AdminPage = () => {
 
     const handleStatusChange = async (reservationId, newStatus) => {
         try {
-            const response = await axios.put("http://localhost:3000/api/reservations/status", {
+            const response = await axios.put(`${API_BASE_URL}/api/reservations/status`, {
                 reservationId,
                 newStatus
             }, {
@@ -85,7 +87,7 @@ const AdminPage = () => {
         if (selectedHotelId && !isNaN(selectedHotelId)) {
             const fetchRooms = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:3000/api/rooms/${selectedHotelId}`, {
+                    const response = await axios.get(`${API_BASE_URL}/api/rooms/${selectedHotelId}`, {
                         headers: { Authorization: `Bearer ${token}` }
                     });
                     setRooms(response.data);
@@ -108,7 +110,7 @@ const AdminPage = () => {
         if (hotelId) {
             const fetchRooms = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:3000/api/rooms/${hotelId}`, {
+                    const response = await axios.get(`${API_BASE_URL}/api/rooms/${hotelId}`, {
                         headers: { Authorization: `Bearer ${token}` }
                     });
                     setRooms(response.data);
@@ -142,7 +144,7 @@ const AdminPage = () => {
         }
 
         try {
-            const response = await axios.post(`http://localhost:3000/api/rooms/${selectedHotelId}`, newRoom, {
+            const response = await axios.post(`${API_BASE_URL}/api/rooms/${selectedHotelId}`, newRoom, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setRooms([...rooms, response.data]);  
@@ -155,7 +157,7 @@ const AdminPage = () => {
     // Edit a room
     const handleEditRoom = async () => {
         try {
-            const response = await axios.put(`http://localhost:3000/api/rooms/${editRoom.id}`, editRoom, {
+            const response = await axios.put(`${API_BASE_URL}/api/rooms/${editRoom.id}`, editRoom, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setRooms(rooms.map((room) => (room.id === editRoom.id ? response.data : room))); 
@@ -168,7 +170,7 @@ const AdminPage = () => {
     // Delete a room
     const handleDeleteRoom = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/api/rooms/${id}`, {
+            await axios.delete(`${API_BASE_URL}/api/rooms/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setRooms(rooms.filter((room) => room.id !== id));  
@@ -181,7 +183,7 @@ const AdminPage = () => {
     useEffect(() => {
         const fetchFeedbacks = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/feedbacks', {
+                const response = await axios.get(`${API_BASE_URL}/api/feedbacks`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setFeedbacks(response.data);
@@ -200,7 +202,7 @@ const AdminPage = () => {
 
     const handleSaveEdit = async () => {
         try {
-            const response = await axios.put(`http://localhost:3000/api/feedbacks/${editFeedback.id}`, {
+            const response = await axios.put(`${API_BASE_URL}/api/feedbacks/${editFeedback.id}`, {
                 comment: editFeedback.comment,
                 rating: editFeedback.rating
             }, {
@@ -216,7 +218,7 @@ const AdminPage = () => {
     // Delete feedback
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/api/feedbacks/${id}`, {
+            await axios.delete(`${API_BASE_URL}/api/feedbacks/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setFeedbacks(feedbacks.filter(feedback => feedback.id !== id));
@@ -236,10 +238,10 @@ const AdminPage = () => {
 
     const handleAddHotel = async () => {
     try {
-        const response = await axios.post('http://localhost:3000/api/hotels', newHotel, {
+        const response = await axios.post(`${API_BASE_URL}/api/hotels`, newHotel, {
             headers: { Authorization: `Bearer ${token}` }
         });
-        const updatedHotelsResponse = await axios.get('http://localhost:3000/api/hotels', {
+        const updatedHotelsResponse = await axios.get(`${API_BASE_URL}/api/hotels`, {
             headers: { Authorization: `Bearer ${token}` }
         });
         setHotels(updatedHotelsResponse.data);
@@ -260,7 +262,7 @@ const AdminPage = () => {
             const token = localStorage.getItem("token"); 
             const encodedHotelName = encodeURIComponent(hotelName); 
 
-            const response = await axios.delete(`http://localhost:3000/api/hotels/${encodedHotelName}`, {
+            const response = await axios.delete(`${API_BASE_URL}/api/hotels/${encodedHotelName}`, {
                 headers: {
                     Authorization: `Bearer ${token}`, 
                 },

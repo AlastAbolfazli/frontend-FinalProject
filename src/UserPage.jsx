@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import LoginButton from "./LoginButton";
 import './App.css';
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const UserPage = () => {
   const navigate = useNavigate();
   const [hotels, setHotels] = useState([]); 
@@ -26,7 +28,7 @@ const UserPage = () => {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/hotels');
+        const response = await axios.get(`${API_BASE_URL}/api/hotels‍‍‍‍`);
         setHotels(response.data); 
       } catch (err) {
         console.error("Error fetching hotels: ", err);
@@ -43,7 +45,7 @@ const UserPage = () => {
     console.log("User Email from localStorage:", localStorage.getItem("userEmail"));
     if (email) {
       try {
-        const response = await axios.get(`http://localhost:3000/api/reservations/${email}`);
+        const response = await axios.get(`${API_BASE_URL}/reservations/${email}`);
         console.log("Fetched booking history:", response.data);
         setBookingHistory(response.data); 
       } catch (err) {
@@ -76,7 +78,7 @@ const UserPage = () => {
 
     console.log("Sending Filters: ", filters); 
 
-    const response = await axios.get('http://localhost:3000/api/hotels', {
+    const response = await axios.get(`${API_BASE_URL}/api/hotels`, {
       params: {
         location: location,  
         minPrice: filters.price[0],
@@ -126,7 +128,7 @@ const UserPage = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3000/api/feedback", feedbackData);
+      const response = await axios.post(`${API_BASE_URL}/api/feedback`, feedbackData);
       alert("Your feedback has been submitted!");
       setUserFeedback('');
       setRating(0); 

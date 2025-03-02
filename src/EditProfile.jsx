@@ -5,6 +5,8 @@ import LoginButton from "./LoginButton";
 import axios from "axios";
 import "./App.css";
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const EditProfile = () => {
   const navigate = useNavigate();
 
@@ -31,7 +33,7 @@ const EditProfile = () => {
 
   const handleSaveProfile = async () => {
     try {
-      const response = await axios.put("http://localhost:3000/api/users/update", {
+      const response = await axios.put(`${API_BASE_URL}/api/users/update`, {
         userId: storedUserId,
         newEmail: userData.email === storedEmail ? null : userData.email,
         newPassword: userData.newPassword || null,
@@ -56,7 +58,7 @@ const EditProfile = () => {
     console.log("User Email from localStorage:", localStorage.getItem("userEmail"));
     if (email) {
       try {
-        const response = await axios.get(`http://localhost:3000/api/reservations/${email}`);
+        const response = await axios.get(`${API_BASE_URL}/api/reservations/${email}`);
         console.log("Fetched booking history:", response.data);
         setBookingHistory(response.data); 
       } catch (err) {

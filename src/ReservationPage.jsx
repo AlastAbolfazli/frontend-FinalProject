@@ -5,7 +5,7 @@ import LoginButton from "./LoginButton";
 import { TextField, Button, Container, Typography, Grid, Box, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 import './ReservationPage.css';
 
-
+const API_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
 
 const ReservationPage = () => {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ const ReservationPage = () => {
   };
 
   try {
-    const response = await axios.post('http://localhost:3000/api/reservations', reservationData);
+    const response = await axios.post(`${API_BASE_URL}/api/reservations`, reservationData);
     if (response.status === 201) {
           alert('Reservation Successful!');
           navigate("/user"); 
