@@ -1,0 +1,249 @@
+.admin-page {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7f6;
+  padding: 40px 0;
+}
+
+.admin-page .MuiContainer-root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1d0358;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Add Hotel Section */
+.add-hotel-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 140px;
+}
+
+.add-hotel-section h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4c1ed6;
+}
+
+.add-hotel-section .MuiTextField-root {
+  margin-bottom: 20px;
+}
+
+.add-hotel-section .MuiButton-root {
+  background-color: #4c1ed6;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.add-hotel-section .MuiButton-root:hover {
+  background-color: #3e10a7;
+  transform: translateY(-2px);
+}
+
+/* Manage Hotels Section */
+.manage-hotels-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.manage-hotels-section h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4c1ed6;
+}
+
+.manage-hotels-section .hotel-card {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.manage-hotels-section .hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.manage-hotels-section .hotel-card .MuiCardContent-root {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.manage-hotels-section .MuiButton-root {
+  background-color: #f44336;
+  color: white;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.manage-hotels-section .MuiButton-root:hover {
+  background-color: #d32f2f;
+}
+
+/* Room Management Section */
+.manage-rooms-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.manage-rooms-section h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4c1ed6;
+}
+
+/* Room Cards */
+.room-card {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.room-card .MuiCardContent-root {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.room-card .MuiTypography-h6 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.room-card .MuiTypography-body1 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.room-card .MuiButton-root {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.room-card .MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Feedback Section */
+.feedback-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.feedback-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1d0358;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Feedback Cards */
+.feedback-card {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-card .MuiCardContent-root {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.MuiButton-root {
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 20px;
+  }
+
+  .add-hotel-section,
+  .manage-hotels-section,
+  .manage-rooms-section,
+  .feedback-section {
+    margin: 0 20px;
+  }
+
+  .add-hotel-section .MuiTextField-root {
+    margin-bottom: 15px;
+  }
+
+  .manage-hotels-section .hotel-card .MuiCardContent-root,
+  .room-card .MuiCardContent-root {
+    padding: 15px;
+  }
+
+  .admin-page h3 {
+    font-size: 2rem;
+  }
+
+  .add-hotel-section h5,
+  .manage-hotels-section h5,
+  .manage-rooms-section h5,
+  .feedback-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .MuiButton-root {
+    width: 100%;
+    padding: 12px;
+  }
+}

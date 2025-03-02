@@ -1,0 +1,364 @@
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+  color: #333;
+}
+
+.home-page {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(32, 45, 118);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px; 
+}
+
+.description {
+  font-size: 1.5rem;
+  color: rgb(32, 45, 118);
+  margin-bottom: 100px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px; 
+  z-index: 2;
+}
+
+
+.header {
+  background: linear-gradient(to right, #e979ef, #7bb0ed);
+  color: rgb(79, 29, 154);
+  width: 100%;
+  padding: 2.1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  top: 0;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+
+.login-btn,
+.demo-btn {
+  width: 200px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #347adb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.demo-btn {
+  background-color: #9b59b6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+.demo-btn:hover {
+  background-color: #8e44ad;
+  transform: translateY(-5px);
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, #d8379b, #115eb5);
+  color: white;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #333;
+  z-index: 2;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15%;
+}
+
+section {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: #f7f7f7;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.user-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 30px;
+  background-color: #f4f6f9;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(79, 29, 154);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hotel-search {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.hotel-search-button {
+  width: 100%;
+  padding: 8px 20px;
+  color: #9b59b6;
+  font-size: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.hotel-search h3 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.hotel-list {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.hotel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px; 
+}
+
+.hotel-item button {
+  padding: 8px 20px;
+  background-color: #1d3d6f;
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-item button:hover {
+  background-color: #2e4c91;
+}
+
+.booking-history {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.booking-history .hotel-item {
+  margin-bottom: 15px;
+}
+
+.booking-history .hotel-item h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.booking-history .hotel-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.feedback {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback h3 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.feedback button {
+  padding: 8px 20px;
+  background-color: #9b59b6;
+  color: white;
+  font-size: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.feedback button:hover {
+  background-color: #8e44ad;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hotel-search,
+  .hotel-list,
+  .booking-history,
+  .feedback {
+    padding: 20px;
+  }
+
+  .hotel-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hotel-item button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Edit Profile Page Styles */
+.edit-profile {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+
+.edit-profile h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.edit-profile {
+  margin-bottom: 20px;
+}
+
+.edit-profile .buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.edit-profile button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.edit-profile button:hover {
+  transform: scale(1.05);
+}
+
+
+.hotel-list {
+  padding: 20px;
+}
+
+.hotel-list {
+  justify-content: flex-start;
+}
+
+.hotel-item img {
+  border-radius: 4px 4px 0 0;
+}
+
+.hotel-item {
+  margin-bottom: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .login-btn,
+  .demo-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

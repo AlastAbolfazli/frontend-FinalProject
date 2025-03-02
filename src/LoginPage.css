@@ -1,0 +1,126 @@
+
+
+/* Header Style */
+.header-loginpage {
+  background: linear-gradient(to right, #e979ef, #7bb0ed);
+  color: rgb(79, 29, 154);
+  width: 100%;
+  padding: 2.1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Style */
+.footer-loginpage  {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, #d8379b, #115eb5);
+  color: white;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.login-page {
+    font-family: 'Poppins', sans-serif;
+    align-items: center; 
+    text-align: center;
+    height: 100vh; 
+    background: linear-gradient(to bottom, #ffffff, #f0f2f5);
+}
+
+.login-page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1d0358;
+  margin-bottom: 30px;
+}
+
+.login-page-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 350px;
+    margin-top: 140px;
+}
+
+.login-page-form:hover {
+    transform: translateY(-5px); 
+}
+
+
+.MuiTextField-root {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1e60b7;
+    transform: translateY(-2px);
+}
+
+
+.signup-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #5017a5;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-page {
+        padding: 20px;
+    }
+
+    .login-page-title {
+        font-size: 2rem;
+    }
+
+    .login-page-form {
+        padding: 30px;
+    }
+}
